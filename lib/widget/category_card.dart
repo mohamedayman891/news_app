@@ -19,8 +19,7 @@ class CategoryCard extends StatelessWidget {
         );
       },
       child: Container(
-        height: 85,
-        width: 150,
+        width: MediaQuery.sizeOf(context).width * 0.4,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           image: DecorationImage(

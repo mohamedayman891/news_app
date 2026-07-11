@@ -13,9 +13,12 @@ class NewsTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(6),
           child: Image.network(
             articlesModels.image,
-            height: 200,
+            height: MediaQuery.sizeOf(context).width * 0.5,
             width: double.infinity,
             fit: BoxFit.cover,
+            errorBuilder: (context, error, stackTrace) {
+              return const Icon(Icons.broken_image);
+            },
           ),
         ),
         SizedBox(height: 12),
@@ -33,7 +36,6 @@ class NewsTile extends StatelessWidget {
         Text(
           articlesModels.subtitle,
           maxLines: 2,
-
           style: TextStyle(color: Colors.grey, fontSize: 14),
         ),
       ],

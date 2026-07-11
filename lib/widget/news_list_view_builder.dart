@@ -27,7 +27,7 @@ class _NewsListViewState extends State<NewsListViewBuilder> {
         if (snapshot.hasData) {
           return NewsListView(articles: snapshot.data!);
         } else if (snapshot.hasError) {
-          return SliverToBoxAdapter(child: Text("opps was has an error"));
+          return SliverToBoxAdapter(child: Text("opps there was an error"));
         } else {
           return SliverToBoxAdapter(
             child: Center(child: CircularProgressIndicator()),

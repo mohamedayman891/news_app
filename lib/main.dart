@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutterapp/views/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(NewsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class NewsApp extends StatelessWidget {
+  const NewsApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false, home: HomeView());

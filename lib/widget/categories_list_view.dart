@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/models/category_model.dart';
-import 'package:flutterapp/widget/categories_card.dart';
+import 'package:flutterapp/widget/category_card.dart';
 
 class CategoriesListView extends StatelessWidget {
   const CategoriesListView({super.key});
 
   final List<CategoryModel> categories = const [
-    CategoryModel(image: "assets/business.avif", categoryName: "Business"),
     CategoryModel(
-      image: "assets/entertaiment.avif",
+      image: "assets/image/business.avif",
+      categoryName: "Business",
+    ),
+    CategoryModel(
+      image: "assets/image/entertaiment.avif",
       categoryName: "Entertainment",
     ),
-    CategoryModel(image: "assets/health.avif", categoryName: "Health"),
-    CategoryModel(image: "assets/science.avif", categoryName: "Science"),
-    CategoryModel(image: "assets/sports.avif", categoryName: "Sports"),
-    CategoryModel(image: "assets/technology.jpeg", categoryName: "Technology"),
-    CategoryModel(image: "assets/general.avif", categoryName: "General"),
+    CategoryModel(image: "assets/image/health.avif", categoryName: "Health"),
+    CategoryModel(image: "assets/image/science.avif", categoryName: "Science"),
+    CategoryModel(image: "assets/image/sports.avif", categoryName: "Sports"),
+    CategoryModel(
+      image: "assets/image/technology.jpeg",
+      categoryName: "Technology",
+    ),
+    CategoryModel(image: "assets/image/general.avif", categoryName: "General"),
   ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 85,
+      height: MediaQuery.sizeOf(context).height * 0.1,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
